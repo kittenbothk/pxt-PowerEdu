@@ -874,7 +874,8 @@ export function Test(): number{
         pins.i2cWriteBuffer(RFID_ADDR, buf)
     }
 
-
+/*
+	
     //% blockId="powerbrick_rgbattach" block="RGB connect ot %port"
     //% weight=85 blockGap=8
     //% group="RGB"
@@ -888,7 +889,9 @@ export function Test(): number{
      * Shows a rainbow pattern on all LEDs. 
      * @param startHue the start hue value for the rainbow, eg: 1
      * @param endHue the end hue value for the rainbow, eg: 360
-     */
+     **/
+	
+/*
     //% blockId="powerbrick_rgbrainbow" block="show rainbow from %startHue|to %endHue"
     //% weight=85 blockGap=8
     //% group="RGB" 
@@ -955,13 +958,14 @@ export function Test(): number{
 
         rgbShow();
     }
-
+*/
     /**
      * Converts a hue saturation luminosity value into a RGB color
      * @param h hue from 0 to 360
      * @param s saturation from 0 to 99
      * @param l luminosity from 0 to 99
-     */
+     **/
+/*
     //% blockId=neopixelHSL block="hue %h|saturation %s|luminosity %l"
     //% group="RGB" 
     export function hsl(h: number, s: number, l: number): number {
@@ -999,14 +1003,18 @@ export function Test(): number{
         let b = b$ + m;
         return packRGB(r, g, b);
     }
-
+*/
+	
+/*
     //% blockId="neopixel_clear" block="RGB clear"
     //% group="RGB" 
     export function rgbClear(): void {
         rgbBuf.fill(0, 0, RGB_PIX * 3);
         rgbShow();
     }
-
+*/
+	
+/*
     //% blockId=setRGBPix block="RGB PIX%pix Color%rgb=neopixel_colors"
     //% group="RGB" 
     export function setRGBPix(pix: number, rgb: number): void {
@@ -1027,13 +1035,17 @@ export function Test(): number{
         }
         setBufferRGB(pix, red, green, blue)
     }
-
+*/
+	
+/*
     //% blockId=setRGBXy block="RGB X%x Y%y Color%rgb=neopixel_colors"
     //% group="RGB" 
     export function setRGBXy(x: number, y: number, rgb: number): void {
         setRGBPix(x + y * RGB_M, rgb)
     }
-
+*/
+	
+/*
     //% blockId=showNum block="Show number %num Color%rgb=neopixel_colors"
     //% group="RGB" blockGap=16
     export function showNum(num: number, rgb: number): void {
@@ -1065,7 +1077,9 @@ export function Test(): number{
         }
         rgbShow()
     }
-
+*/
+	
+/*
     //% blockId=neopixel_colors block="%color"
     //% group="RGB" 
     export function colors(color: NeoPixelColors): number {
