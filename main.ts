@@ -364,7 +364,7 @@ export function Test(): number{
         return pins.analogReadPin(pin)
     }
 	
-    //% blockId=powerbrick_tracer_init block="Init Tracer |A %pinA|B %pinB"
+    //% blockId=powerbrick_tracer_init block="Init Tracer |%pinA|%pinB"
     //% group="Linefollower" weight=10
     export function TracerInit(pinA: DigitalPin, pinB: DigitalPin): {
 	tracerport[0] = pinA;
