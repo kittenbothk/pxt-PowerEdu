@@ -53,7 +53,7 @@ namespace PowerEDU {
 
     let _intensity = 3
     let dbuf = [0, 0, 0, 0]
-
+    let tracerport=[null,null]
     const FontNum = [
         0xff81ff,
         0x0000ff,
@@ -356,18 +356,26 @@ export function Test(): number{
         return Math.floor(ret * 10 / 6 / 58);
     }
 
-    //% blockId=powerbrick_sound block="Sound|pin &pin"
+    //% blockId=powerbrick_sound block="Sound|pin %pin"
     //% weight=90
     //% group="Ultrasonic/Mic" blockGap=50
     export function SoundSensor(pin: AnalogPin): number {
         //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
+	
+    //% blockId=powerbrick_tracer_init block="Init Tracer Pin|A %pin1|B &pin2"
+    //% group="Linefollower" weight=10
+    export function TracerInit(A: DigitalPin, B: DigitalPin):{
+	tracerport[0]=B
+	tracerport[1]=A
+    }
 
-    //% blockId=powerbrick_tracer block="Tracer|pin %pin"
+	    //% blockId=powerbrick_tracer block="Tracer|i %Slots"
     //% group="Linefollower" weight=81
-    export function Tracer(pin: DigitalPin): boolean {
+    export function Tracer(i: Slots): boolean {
         //let pin = PortDigi[port][slot]
+    	let pin=tracerport[i]
         pins.setPull(pin, PinPullMode.PullUp)
         return pins.digitalReadPin(pin) == 1
     }
