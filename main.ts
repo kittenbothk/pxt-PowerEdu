@@ -53,7 +53,7 @@ namespace PowerEDU {
 
     let _intensity = 3
     let dbuf = [0, 0, 0, 0]
-    let tracerport=[DigitalPin.P0,DigitalPin.P8]
+    let tracerport=[null,null]
     const FontNum = [
         0xff81ff,
         0x0000ff,
