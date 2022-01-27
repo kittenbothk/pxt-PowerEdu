@@ -601,7 +601,7 @@ namespace PowerEDU {
         return sum;
     }
 
-    //% blockId=powerbrick_mp3_connect block="MP3 Connect|Pin B TX %txpin| Pin A RX %rxpin"
+    //% blockId=powerbrick_mp3_connect block="MP3 Connect|Pin A TX %txpin| Pin B RX %rxpin"
     //% group="MP3" weight=39
     export function MP3Connect(txpin: SerialPin, rxpin: SerialPin): void {
         //let pin0 = PortSerial[port][0]
