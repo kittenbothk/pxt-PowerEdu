@@ -380,7 +380,7 @@ export function Test(): number{
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=powerbrick_tracer block="Tracer|port %port|slot %slot"
+    //% blockId=powerbrick_tracer block="Tracer|pin %pin"
     //% group="Linefollower" weight=81
     export function Tracer(pin: DigitalPin): boolean {
         //let pin = PortDigi[port][slot]
@@ -388,11 +388,11 @@ export function Test(): number{
         return pins.digitalReadPin(pin) == 1
     }
 
-    //% blockId=powerbrick_onTracerEvent block="on Tracer|%port|slot %slot touch black"
+    //% blockId=powerbrick_onTracerEvent block="on Tracer|%pin touch black"
     //% weight=80
     //% group="Linefollower" blockGap=50
-    export function onTracerEvent(port: Ports, slot: Slots, handler: () => void): void {
-        let pin = PortDigi[port][slot]
+    export function onTracerEvent(pin: DigitalPin, handler: () => void): void {
+        //let pin = PortDigi[port][slot]
         pins.setPull(pin, PinPullMode.PullUp)
         pins.onPulsed(pin, PulseValue.High, handler)
     }
