@@ -477,7 +477,7 @@ namespace PowerEDU {
         }
     }
 
-    //% blockId=powerbrick_soil block="Soil|DHT Pin A %pin"
+    //% blockId=powerbrick_soil block="Soil|Pin A %pin"
     //% weight=60
     //% group="Environment" blockGap=50
     export function Soil(pin: AnalogPin): number {
@@ -485,7 +485,7 @@ namespace PowerEDU {
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=powerbrick_waterlevel block="Water level |DHT Pin A %pin"
+    //% blockId=powerbrick_waterlevel block="Water level |Pin A %pin"
     //% weight=60
     //% group="Environment" blockGap=50
     export function WaterLevel(pin: AnalogPin): number {
