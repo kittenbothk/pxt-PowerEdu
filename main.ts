@@ -53,7 +53,7 @@ namespace PowerEDU {
 
     let _intensity = 3
     let dbuf = [0, 0, 0, 0]
-    let tracerport=[null,null]
+    let tracerport=[DigitalPin.P0,DigitalPin.P8]
     const FontNum = [
         0xff81ff,
         0x0000ff,
@@ -366,7 +366,7 @@ export function Test(): number{
 	
     //% blockId=powerbrick_tracer_init block="Init Tracer Pin|A %pin1|B &pin2"
     //% group="Linefollower" weight=10
-    export function TracerInit(A: DigitalPin, B: DigitalPin):{
+    export function TracerInit(A: DigitalPin, B: DigitalPin): {
 	tracerport[0]=B
 	tracerport[1]=A
     }
