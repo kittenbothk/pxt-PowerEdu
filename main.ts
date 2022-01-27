@@ -333,7 +333,7 @@ export function Test(): number{
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
-    //% blockId=powerbrick_ultrasonic block="Ultrasonic|pin B %pin"
+    //% blockId=powerbrick_ultrasonic block="Ultrasonic|Pin B %pin"
     //% group="Ultrasonic/Mic" weight=91
     export function Ultrasonic(pin:DigitalPin): number {
         // send pulse
@@ -356,7 +356,7 @@ export function Test(): number{
         return Math.floor(ret * 10 / 6 / 58);
     }
 
-    //% blockId=powerbrick_sound block="Sound|pin A %pin"
+    //% blockId=powerbrick_sound block="Sound Sensor|Pin A %pin"
     //% weight=90
     //% group="Ultrasonic/Mic" blockGap=50
     export function SoundSensor(pin: AnalogPin): number {
@@ -409,7 +409,7 @@ export function Test(): number{
     }
 
 
-    //% blockId=powerbrick_dht11 block="DHT11|pin B %pin|type %readtype"
+    //% blockId=powerbrick_dht11 block="DHT11|Pin B %pin|type %readtype"
     //% weight=60
     //% group="Environment" blockGap=50
     export function DHT11(pin: DigitalPin, readtype: DHT11Type): number {
@@ -484,19 +484,19 @@ export function Test(): number{
         }
     }
 
-    //% blockId=powerbrick_soil block="Soil|port %port"
+    //% blockId=powerbrick_soil block="Soil|pin %pin"
     //% weight=60
     //% group="Environment" blockGap=50
-    export function Soil(port: PortsA): number {
-        let pin = PortAnalog[port]
+    export function Soil(pin: AnalogPin): number {
+        //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=powerbrick_waterlevel block="Water level |port %port"
+    //% blockId=powerbrick_waterlevel block="Water level |pin %pin"
     //% weight=60
     //% group="Environment" blockGap=50
-    export function WaterLevel(port: PortsA): number {
-        let pin = PortAnalog[port]
+    export function WaterLevel(pin: AnalogPin): number {
+        //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
 
