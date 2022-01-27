@@ -166,17 +166,6 @@ namespace PowerEDU {
         Humidity = 2
     }
 
-    export enum Servos {
-        S1 = 8,
-        S2 = 9,
-        S3 = 10,
-        S4 = 11,
-        S5 = 12,
-        S6 = 13,
-        S7 = 14,
-        S8 = 15
-    }
-
     export enum RfidSector {
         S1 = 1,
         S2 = 2,
@@ -199,11 +188,6 @@ namespace PowerEDU {
         B0 = 0,
         B1 = 1,
         B2 = 2
-    }
-
-    export enum Motors {
-        M1 = 0x1,
-        M2 = 0x2
     }
 
     export enum TracerEvent {
