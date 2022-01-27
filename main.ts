@@ -53,7 +53,7 @@ namespace PowerEDU {
 
     let _intensity = 3
     let dbuf = [0, 0, 0, 0]
-    let tracerport=[null,null]
+    //let tracerport=[null,null]
     const FontNum = [
         0xff81ff,
         0x0000ff,
@@ -414,7 +414,7 @@ export function Test(): number{
     //% group="Environment" blockGap=50
     export function DHT11(pin: DigitalPin, readtype: DHT11Type): number {
         //let dht11pin = PortDigi[port][0]
-
+	let dht11pin=pin
         pins.digitalWritePin(dht11pin, 0)
         basic.pause(18)
         let i = pins.digitalReadPin(dht11pin)
