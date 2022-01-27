@@ -367,8 +367,8 @@ export function Test(): number{
     //% blockId=powerbrick_tracer_init block="Init Tracer |A %pinA|B %pinB"
     //% group="Linefollower" weight=10
     export function TracerInit(pinA: DigitalPin, pinB: DigitalPin): {
-	tracerport[0] = pinA
-	tracerport[1] = pinB
+	tracerport[0] = pinA;
+	tracerport[1] = pinB;
     }
 
     //% blockId=powerbrick_tracer block="Tracer|pin %pin"
