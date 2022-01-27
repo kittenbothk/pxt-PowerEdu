@@ -8,7 +8,6 @@ PowerEdu designed for Micro:bit
 //% groups='["Ultrasonic/Mic", "Linefollower", "Bumper", "Environment", "Color/Gesture", "Mp3", "RFID", "RGB", "InfraTemp", "Led segment"]'
 
 namespace PowerEDU {
-    const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
     const MODE2 = 0x01
     const SUBADR1 = 0x02
@@ -622,7 +621,7 @@ namespace PowerEDU {
         serial.writeBuffer(buf)
     }
 
-    //% blockId=powerbrick_mp3_volumn block="MP3 Volumn|%volumn"
+    //% blockId=powerbrick_mp3_volumn block="MP3 Volume|%volumn"
     //% volumn.min=0 volumn.max=31
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     //% group="MP3" weight=37
@@ -835,11 +834,12 @@ namespace PowerEDU {
 
 
 	
-    //% blockId="powerbrick_rgbattach" block="RGB connect ot %port"
+    //% blockId="powerbrick_rgbattach" block="RGB connect ot %pin"
     //% weight=85 blockGap=8
     //% group="RGB"
-    export function rgbConnect(port: Ports) {
-        rgbPin = PortDigi[port][0];
+    export function rgbConnect(pin: DigitalPin) {
+        //rgbPin = PortDigi[port][0];
+	rgbPin=pin
         basic.pause(20)
         showColor(colors(NeoPixelColors.Black))
     }
