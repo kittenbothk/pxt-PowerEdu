@@ -382,8 +382,8 @@ export function Test(): number{
 
     //% blockId=powerbrick_tracer block="Tracer|port %port|slot %slot"
     //% group="Linefollower" weight=81
-    export function Tracer(port: Ports, slot: Slots): boolean {
-        let pin = PortDigi[port][slot]
+    export function Tracer(pin: DigitalPin): boolean {
+        //let pin = PortDigi[port][slot]
         pins.setPull(pin, PinPullMode.PullUp)
         return pins.digitalReadPin(pin) == 1
     }
