@@ -333,11 +333,11 @@ export function Test(): number{
         pins.i2cWriteBuffer(PCA9685_ADDRESS, buf);
     }
 
-    //% blockId=powerbrick_ultrasonic block="Ultrasonic|port %port"
+    //% blockId=powerbrick_ultrasonic block="Ultrasonic|pin %pin"
     //% group="Ultrasonic/Mic" weight=91
-    export function Ultrasonic(port: Ports): number {
+    export function Ultrasonic(pin:DigitalPin): number {
         // send pulse
-        let pin = PortDigi[port][0]
+        //let pin = PortDigi[port][0]
         pins.setPull(pin, PinPullMode.PullNone);
         pins.digitalWritePin(pin, 0);
         control.waitMicros(2);
@@ -356,11 +356,11 @@ export function Test(): number{
         return Math.floor(ret * 10 / 6 / 58);
     }
 
-    //% blockId=powerbrick_sound block="Sound|port %port"
+    //% blockId=powerbrick_sound block="Sound|pin &pin"
     //% weight=90
     //% group="Ultrasonic/Mic" blockGap=50
-    export function SoundSensor(port: PortsA): number {
-        let pin = PortAnalog[port]
+    export function SoundSensor(pin: AnalogPin): number {
+        //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
 
