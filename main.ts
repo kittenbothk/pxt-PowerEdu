@@ -834,7 +834,7 @@ namespace PowerEDU {
 
 
 	
-    //% blockId="powerbrick_rgbattach" block="RGB connect ot %pin"
+    //% blockId="powerbrick_rgbattach" block="RGB connect at Pin B %pin"
     //% weight=85 blockGap=8
     //% group="RGB"
     export function rgbConnect(pin: DigitalPin) {
