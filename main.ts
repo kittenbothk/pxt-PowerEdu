@@ -363,13 +363,15 @@ export function Test(): number{
         //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
-	
+
+/*
     //% blockId=powerbrick_tracer_init block="Init Tracer |%pinA|%pinB"
     //% group="Linefollower" weight=10
     export function TracerInit(pinA: DigitalPin, pinB: DigitalPin): {
 	tracerport[0] = pinA;
 	tracerport[1] = pinB;
     }
+*/
 
     //% blockId=powerbrick_tracer block="Tracer|pin %pin"
     //% group="Linefollower" weight=81
@@ -389,29 +391,29 @@ export function Test(): number{
         pins.onPulsed(pin, PulseValue.High, handler)
     }
 
-    //% blockId=powerbrick_bumper block="Bumper|port %port|slot %slot"
+    //% blockId=powerbrick_bumper block="Bumper|pin %pin"
     //% group="Bumper" weight=71
-    export function Bumper(port: Ports, slot: Slots): boolean {
-        let pin = PortDigi[port][slot]
+    export function Bumper(pin: DigitalPin): boolean {
+        //let pin = PortDigi[port][slot]
         pins.setPull(pin, PinPullMode.PullUp)
         return pins.digitalReadPin(pin) == 0
     }
 
-    //% blockId=powerbrick_onBumperEvent block="on Bumper|%port|slot %slot pressed"
+    //% blockId=powerbrick_onBumperEvent block="on Bumper|%pin pressed"
     //% group="Bumper" weight=70
-    export function onBumperEvent(port: Ports, slot: Slots, handler: () => void): void {
-        let pin = PortDigi[port][slot]
+    export function onBumperEvent(pin: DigitalPin, handler: () => void): void {
+        //let pin = PortDigi[port][slot]
 
         pins.setPull(pin, PinPullMode.PullUp)
         pins.onPulsed(pin, PulseValue.Low, handler)
     }
 
 
-    //% blockId=powerbrick_dht11 block="DHT11|port %port|type %readtype"
+    //% blockId=powerbrick_dht11 block="DHT11|pin %pin"
     //% weight=60
     //% group="Environment" blockGap=50
-    export function DHT11(port: Ports, readtype: DHT11Type): number {
-        let dht11pin = PortDigi[port][0]
+    export function DHT11(pin: DigitalPin, readtype: DHT11Type): number {
+        //let dht11pin = PortDigi[port][0]
 
         pins.digitalWritePin(dht11pin, 0)
         basic.pause(18)
