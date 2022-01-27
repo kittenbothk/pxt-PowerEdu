@@ -249,13 +249,6 @@ namespace PowerEDU {
     let rgbBuf: Buffer = pins.createBuffer(RGB_PIX * 3);
     let rgbPin: DigitalPin;
     let rgbBright: number = 30;	
-let test=0
-
-//% blockId=test block="TEST"
-//% group="TEST" weight=100
-export function Test(): number{
-	return 100
-}
 
     function setBufferRGB(offset: number, red: number, green: number, blue: number): void {
         rgbBuf[offset + 0] = green;
@@ -484,7 +477,7 @@ export function Test(): number{
         }
     }
 
-    //% blockId=powerbrick_soil block="Soil|pin %pin"
+    //% blockId=powerbrick_soil block="Soil|DHT Pin A %pin"
     //% weight=60
     //% group="Environment" blockGap=50
     export function Soil(pin: AnalogPin): number {
@@ -492,7 +485,7 @@ export function Test(): number{
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=powerbrick_waterlevel block="Water level |pin %pin"
+    //% blockId=powerbrick_waterlevel block="Water level |DHT Pin A %pin"
     //% weight=60
     //% group="Environment" blockGap=50
     export function WaterLevel(pin: AnalogPin): number {
