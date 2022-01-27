@@ -363,19 +363,19 @@ export function Test(): number{
         //let pin = PortAnalog[port]
         return pins.analogReadPin(pin)
     }
-	
+	/*
     //% blockId=powerbrick_tracer_init block="Init Tracer Pin|A %pin1|B &pin2"
     //% group="Linefollower" weight=10
     export function TracerInit(A: DigitalPin, B: DigitalPin): {
 	tracerport[0]=B
 	tracerport[1]=A
     }
-
-    //% blockId=powerbrick_tracer block="Tracer|i %Slots"
+*/
+    //% blockId=powerbrick_tracer block="Tracer|pin %pin"
     //% group="Linefollower" weight=81
-    export function Tracer(i: Slots): boolean {
+    export function Tracer(pin: DigitalPin): boolean {
         //let pin = PortDigi[port][slot]
-    	let pin=tracerport[i]
+    	//let pin=tracerport[i]
         pins.setPull(pin, PinPullMode.PullUp)
         return pins.digitalReadPin(pin) == 1
     }
