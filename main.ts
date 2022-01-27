@@ -629,13 +629,13 @@ namespace PowerEDU {
         return sum;
     }
 
-    //% blockId=powerbrick_mp3_connect block="MP3 Connect|port %port"
+    //% blockId=powerbrick_mp3_connect block="MP3 Connect|Pin B TX %txpin| Pin A RX &rxpin"
     //% group="MP3" weight=39
-    export function MP3Connect(port: SerialPorts): void {
-        let pin0 = PortSerial[port][0]
-        let pin1 = PortSerial[port][1]
+    export function MP3Connect(txpin: SerialPin, rxpin: SerialPin): void {
+        //let pin0 = PortSerial[port][0]
+        //let pin1 = PortSerial[port][1]
         // todo: fiber may freeze on steam reading
-        serial.redirect(pin1, SerialPin.P16, BaudRate.BaudRate9600)
+        serial.redirect(txpin, SerialPin.P16, BaudRate.BaudRate9600)
     }
 
     //% blockId=powerbrick_mp3_play block="MP3 Play|%PrevNext"
