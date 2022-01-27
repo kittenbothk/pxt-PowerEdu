@@ -5,7 +5,7 @@ PowerEdu designed for Micro:bit
 */
 
 //% color="#13c2c2" weight=10 icon="\uf0e7"
-//% groups='["Ultrasonic/Mic", "Linefollower", "Bumper", "Environment", "Actuator", "Color/Gesture", "Mp3", "RFID", "RGB", "InfraTemp", "Led segment"]'
+//% groups='["Ultrasonic/Mic", "Linefollower", "Bumper", "Environment", "Color/Gesture", "Mp3", "RFID", "RGB", "InfraTemp", "Led segment"]'
 
 namespace PowerEDU {
     const PCA9685_ADDRESS = 0x40
