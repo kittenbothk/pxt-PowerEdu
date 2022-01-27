@@ -371,7 +371,7 @@ export function Test(): number{
 	tracerport[1]=A
     }
 
-	    //% blockId=powerbrick_tracer block="Tracer|i %Slots"
+    //% blockId=powerbrick_tracer block="Tracer|i %Slots"
     //% group="Linefollower" weight=81
     export function Tracer(i: Slots): boolean {
         //let pin = PortDigi[port][slot]
