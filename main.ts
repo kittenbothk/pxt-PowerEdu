@@ -4,7 +4,7 @@ by Anson from KittenBot HK
 PowerEdu designed for Micro:bit
 */
 
-//% color="#13c2c2" weight=10 icon="\uf0e7"
+//% color="#32A852" weight=10 icon="\uf0e7"
 //% groups='["Actuator", "Ultrasonic/Mic", "Linefollower", "Bumper", "Environment", "Color/Gesture", "Mp3", "RFID", "RGB", "InfraTemp", "Led segment"]'
 
 namespace PowerEDU {
