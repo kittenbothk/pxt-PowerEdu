@@ -487,18 +487,6 @@ namespace PowerEDU {
         basic.pause(10240 * degree / 360);
         MotorStopAll()
     }
-	
-    //% blockId=robotbit_stepper_degree block="Stepper 28BYJ-48|%index|degree %degree"
-    //% gorup="Acuator" weight=90
-    export function StepperDegree(index: Steppers, degree: number): void {
-        if (!initialized) {
-            initPCA9685()
-        }
-        setStepper(index, degree > 0);
-        degree = Math.abs(degree);
-        basic.pause(10240 * degree / 360);
-        MotorStopAll()
-    }
 
 
     //% blockId=robotbit_stepper_dual block="Dual Stepper(Degree) |M1 %degree1| M2 %degree2"
