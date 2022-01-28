@@ -88,59 +88,6 @@ namespace PowerEDU {
         WRITE_SUCC = 4
     }
 
-    const PortDigi = [
-        [DigitalPin.P8, DigitalPin.P0],
-        [DigitalPin.P12, DigitalPin.P1],
-        [DigitalPin.P13, DigitalPin.P2],
-        [DigitalPin.P15, DigitalPin.P14],
-        [DigitalPin.P6, DigitalPin.P3],
-        [DigitalPin.P7, DigitalPin.P4],
-        [DigitalPin.P9, DigitalPin.P10]
-    ]
-
-    const PortSerial = [
-        [SerialPin.P8, SerialPin.P0],
-        [SerialPin.P12, SerialPin.P1],
-        [SerialPin.P13, SerialPin.P2],
-        [SerialPin.P15, SerialPin.P14]
-    ]
-
-    const PortAnalog = [
-        AnalogPin.P0,
-        AnalogPin.P1,
-        AnalogPin.P2,
-        null,
-        AnalogPin.P3,
-        AnalogPin.P4,
-        AnalogPin.P10
-    ]
-
-    export enum Ports {
-        PORT1 = 0,
-        PORT2 = 1,
-        PORT3 = 2,
-        PORT4 = 3,
-        PORT5 = 4,
-        PORT6 = 5,
-        PORT7 = 6
-    }
-
-    export enum PortsA {
-        PORT1 = 0,
-        PORT2 = 1,
-        PORT3 = 2,
-        PORT5 = 4,
-        PORT6 = 5,
-        PORT7 = 6
-    }
-
-    export enum SerialPorts {
-        PORT1 = 0,
-        PORT2 = 1,
-        PORT3 = 2,
-        PORT4 = 3
-    }
-
     export enum PrevNext {
         //% block=play
         Play = 0xaa,
@@ -158,11 +105,6 @@ namespace PowerEDU {
         LED2 = 2,
         LED3 = 3,
         LED4 = 4
-    }
-
-    export enum Slots {
-        A = 1, // inverse slot by zp
-        B = 0
     }
 
     export enum GCOnOff {
@@ -1477,17 +1419,5 @@ namespace PowerEDU {
         return b;
     }
 
-
-    //% blockId=powerbrick_getpin block="Digital port|%port slot|%slot"
-    //% advanced=true
-    export function GetPin(port: Ports, slot: Slots): DigitalPin {
-        return pins.digitalReadPin(PortDigi[port][slot])
-    }
-
-    //% blockId=powerbrick_getanalog block="Analog port|%port"
-    //% advanced=true
-    export function GetAnalog(port: PortsA): AnalogPin {
-        return pins.analogReadPin(PortAnalog[port])
-    }
 
 }
