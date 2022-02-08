@@ -742,7 +742,7 @@ namespace PowerEDU {
         return pins.analogReadPin(pin)
     }
 
-    //% blockId=powerbrick_infratemp block="Infra Temp"
+    //% blockId=powerbrick_infratemp block="Infra Temp  Pin A:SCL Pin B:SDA"
     //% weight=60
     //% group="InfraTemp"
     export function InfraTemp(): number {
@@ -751,7 +751,7 @@ namespace PowerEDU {
         return Math.roundWithPrecision(val, 2);
     }
 
-    //% blockId=powerbrick_envtemp block="Environment Temp"
+    //% blockId=powerbrick_envtemp block="Environment Temp Pin A:SCL Pin B:SDA"
     //% weight=60
     //% group="InfraTemp"
     export function EnvironTemp(): number {
@@ -776,7 +776,7 @@ namespace PowerEDU {
     /**
      * turn on display
      */
-    //% blockId="powerbrick_segment_on" block="turn on display"
+    //% blockId="powerbrick_segment_on" block="turn on display Pin A:SCL Pin B:SDA"
     //% group="Led segment" weight=32
     export function segOn() {
         segCmd(_intensity * 16 + 1)
@@ -949,7 +949,7 @@ namespace PowerEDU {
         serial.writeBuffer(buf)
     }
 
-    //% blockId=powerbrick_gc_mode block="Gesture/Color mode|%mode"
+    //% blockId=powerbrick_gc_mode block="Gesture/Color Pin A:SCL Pin B:SDA mode|%mode"
     //% group="Color/Gesture" weight=29
     export function GC_MODE(mode: GCMode): void {
         i2cwrite(KC_ADDR, KC_MODE, mode);
@@ -1021,7 +1021,7 @@ namespace PowerEDU {
         return buff[rgb];
     }
 
-    //% blockId=powerbrick_rfidprobe block="RFID Probe"
+    //% blockId=powerbrick_rfidprobe block="RFID Probe Pin A:SCL Pin B:SDA"
     //% weight=21
     //% group="RFID" 
     export function RfidProbe(): void {
