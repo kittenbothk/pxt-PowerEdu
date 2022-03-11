@@ -5,7 +5,8 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4"
+        "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4",
+        "KittenTurbidity": "github:kittenbothk/pxt-KittenTurbidity"
     },
     "files": [
         "main.blocks",
