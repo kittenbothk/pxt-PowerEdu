@@ -12,8 +12,8 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "_locales/zh-cn/PowerEDU-strings.json",
-        "_locales/zh-tw/PowerEDU-strings.json"
+        "_locales/zh-CN/PowerEDU-strings.json",
+        "_locales/zh-TW/PowerEDU-strings.json"
     ],
     "testFiles": [
         "test.ts"
