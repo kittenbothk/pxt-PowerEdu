@@ -1,12 +1,12 @@
 {
     "name": "PowerEDU",
-    "version": "0.2.2",
-    "description": "Extension for Powerbrick+EDU",
+    "version": "0.2.4",
+    "description": "Extension for Powerbrick+EDU+Modules Plus",
     "license": "MIT",
     "dependencies": {
         "core": "*",
         "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4",
-        "KittenTurbidity": "github:kittenbothk/pxt-KittenTurbidity"
+        "SensorPlus": "github:kittenbothk/pxt-SensorPlus"
     },
     "files": [
         "main.blocks",
