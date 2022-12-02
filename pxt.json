@@ -1,6 +1,6 @@
 {
     "name": "PowerEDU",
-    "version": "0.2.4",
+    "version": "0.2.6",
     "description": "Extension for Powerbrick+EDU+Modules Plus",
     "license": "MIT",
     "dependencies": {
