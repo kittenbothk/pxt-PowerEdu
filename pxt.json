@@ -11,10 +11,6 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "ds18b20.cpp",
-        "dstemp.cpp",
-        "shims.d.ts",
-        "enums.d.ts",
         "_locales/zh-CN/PowerEDU-strings.json",
         "_locales/zh-TW/PowerEDU-strings.json"
     ],
